@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('scan'){
             steps{
-                sh './mvnw clean sonar:sonar -Dsonar.host.url=http://10.1.0.59:9000'
+                sh './mvnw clean sonar:sonar -Dsonar.host.url=http://10.1.0.59:9000 -Dsonar.login=admin -Dsonar.password=ZjrzLhuQ'
                 }
             
         }
