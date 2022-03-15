@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    stages {
+        stage('scan'){
+            steps{
+                sh './mvnw clean sonar:sonar'
+                }
+            }
+        }
+    }
+}
