@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('scan'){
             steps{
-                withSonarQubeEnv(installationName: 'SonarQube-server'){
+                withSonarQubeEnv(installationName: 'trucks Maven Webapp'){
                     sh './mvnw clean sonar:sonar'
                 }
             }
