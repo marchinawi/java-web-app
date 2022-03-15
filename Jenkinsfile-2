@@ -3,8 +3,10 @@ pipeline {
     stages {
         stage('scan'){
             steps{
-                withSonarQubeEnv(installationName: 'trucks Maven Webapp'){
-                    sh './mvnw clean sonar:sonar'
+                mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=markush \
+  -Dsonar.host.url=http://10.1.0.59:9000 \
+  -Dsonar.login=3f27a2d45d87067b766745510b9d4b4bf7a84057
                 }
             }
         }
